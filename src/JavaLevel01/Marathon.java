@@ -10,12 +10,9 @@ public class Marathon {
                 	participant[i] = "";
                     completion[j] = "";
                 }
-            }
-        }
-        
-        for(int i=0; i<participant.length; i++) {
-            if(!(participant[i].equals(""))) {
-            	answer = participant[i];
+                if(!(participant[i].equals(""))) {
+                	answer = participant[i];
+                }
             }
         }
         
