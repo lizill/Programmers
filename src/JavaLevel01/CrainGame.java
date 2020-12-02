@@ -21,22 +21,16 @@ public class CrainGame {
 		 * 1 5 3 5 1 2 1 4
 		 */
 		
-		// �� �ٱ���
 		int[] basket = new int[moves.length];
 		int basketIndex = 0;
 		int count = 0;
 		
-		// ����� �ٱ��ϸ� �׸�
 		displayBoardAndBasket(board, basket);
 
 		for(int i=0; i<moves.length; i++) {
-			// i�� 1�� ���� ������� -1 ��°���� ù��°�� ���� 0�̿��� ���ڸ� �̾Ƴ� ������ �������� �Ѿ
-			
-			// 0�� �ƴ� ���ڰ� ������ false -> �Ѱ��� ���ʷ� �Űܴ��
 			boolean confirmZero = true;
 			for(int j=0; j<board.length; j++) {
 				if(board[j][moves[i]-1]!=0) {
-					// �ٱ��Ͽ� �ְ� �ε��� +1, ����� 0���� �ٲ���, true
 					basket[basketIndex++] = board[j][moves[i]-1];
 					board[j][moves[i]-1] = 0;
 					confirmZero = false;
